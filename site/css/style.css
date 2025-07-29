@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    z-index: 1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+.icon {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.logo {
+    font-size: 2.8em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    color: #f0f0f0;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    color: #e0e0e0;
+}
+
+.error-message {
+    font-size: 1.1em;
+    color: #d0d0d0;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+.social-links {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.8em;
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    color: #e0e0e0;
+    transform: scale(1.15);
+}
+
+.footer {
+    font-size: 0.9em;
+    opacity: 0.7;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 5px;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    animation-name: drift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes drift {
+    0% { transform: translateY(-150px) rotate(0deg); }
+    100% { transform: translateY(calc(100vh + 150px)) rotate(360deg); }
+}
+
+#copy-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+    font-size: 0.95em;
+    align-items: center;
+}
+#copy-notification.show { display: flex; }
+#copy-notification span { margin-right: 15px; }
+#copy-notification button {
+    background: none; border: none; color: white;
+    font-size: 1.2em; font-weight: bold; cursor: pointer; padding: 0 5px;
+}
+ #copy-notification button:hover { color: #e0e0e0; }
+
+#easter-egg-message {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8em;
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 1001;
+}
+
+@media (max-width: 600px) {
+    .container { padding: 30px 25px; }
+    .logo { font-size: 2.2em; }
+    h1 { font-size: 1.5em; }
+    .error-message { font-size: 1em; }
+    .home-button { padding: 8px 20px; font-size: 0.9em; }
+    .social-links a { font-size: 1.7em; margin: 0 10px; }
+    #easter-egg-message { font-size: 0.7em; bottom: 5px; left: 5px;}
+}

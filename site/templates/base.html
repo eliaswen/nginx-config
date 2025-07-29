@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!--# echo var="tab_title" --></title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22><!--# echo var="favicon" --></text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+
+    <div class="main-content-area">
+        <div class="container">
+            <div class="icon"><!--# echo var="emoji" --></div>
+            <div class="logo"><!--# echo var="title" --></div>
+            <div class="error-message">
+                <!--# echo var="description" -->
+            </div>
+            <!--# if expr="$show_button" -->
+            <a href="<!--# echo var="button_link" -->" class="home-button"><!--# echo var="button_text" --></a>
+            <!--# endif -->
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a id="discord-copy-button" title="Copy Discord Username: ewenlau">
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://www.reddit.com/user/ewenlau1" target="_blank" title="Reddit: u/ewenlau1">
+            <i class="fab fa-reddit-alien"></i>
+        </a>
+        <a href="mailto:contact-me@mail.ewenlau.net" title="Email: contact-me@mail.ewenlau.net">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <div class="footer">
+        © <span id="current-year"></span> ewenlau.net
+    </div>
+
+    <div id="copy-notification">
+        <span>My Discord username has been copied to your clipboard. Keep in mind I'm more active on Reddit, so you should contact me there. I might reject your friend request on Discord.</span>
+        <button id="close-notification">×</button>
+    </div>
+
+    <div id="easter-egg-message">
+        This site was made using Gemini because I'm a bad coder. Thanks Google for unlimited AI studio requests!
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
