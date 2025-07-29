@@ -187,3 +187,11 @@ h1 {
     .social-links a { font-size: 1.7em; margin: 0 10px; }
     #easter-egg-message { font-size: 0.7em; bottom: 5px; left: 5px;}
 }
+
+.link-as-text,
+.link-as-text:visited,
+.link-as-text:hover,
+.link-as-text:active {
+  text-decoration: none;
+  color: inherit;
+}
