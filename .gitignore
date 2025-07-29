@@ -1,1 +1,6 @@
 logs/
+
+# Testing artifacts
+Dockerfile.test
+*.log
+.nginx-test/
