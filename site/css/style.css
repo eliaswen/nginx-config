@@ -217,6 +217,62 @@ body {
     }
 }
 
+/* Error layout styles */
+.error-layout {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #e53e3e;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.error-message {
+    flex: 1;
+}
+
+.error-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+}
+
+.error-description {
+    font-size: 1.125rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Responsive error layout */
+@media (max-width: 640px) {
+    .error-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .error-code {
+        font-size: 4rem;
+    }
+    
+    .error-title {
+        font-size: 1.5rem;
+    }
+    
+    .error-description {
+        font-size: 1rem;
+    }
+}
+
 /* Utility classes */
 .link-as-text,
 .link-as-text:visited,
