@@ -11,18 +11,19 @@
 <body>
     <div class="main-content-area">
         <div class="page-container">
-            <div class="page-icon"><!--# echo var="icon" --></div>
-            <!--# if expr="$title = 'ewenlau.net'" -->
-            <div class="site-title"><!--# echo var="title" --></div>
-            <!--# else -->
-            <h1 class="page-title"><!--# echo var="title" --></h1>
-            <!--# endif -->
-            <div class="page-description">
-                <!--# echo var="description" -->
+            <div class="error-layout">
+                <div class="error-code"><!--# echo var="error_code" --></div>
+                <div class="error-divider"></div>
+                <div class="error-message">
+                    <h1 class="error-title"><!--# echo var="error_title" --></h1>
+                    <div class="error-description">
+                        <!--# echo var="description" -->
+                    </div>
+                    <!--# if expr="$show_button" -->
+                    <a href="<!--# echo var="button_link" -->" class="navigation-button"><!--# echo var="button_text" --></a>
+                    <!--# endif -->
+                </div>
             </div>
-            <!--# if expr="$show_button" -->
-            <a href="<!--# echo var="button_link" -->" class="navigation-button"><!--# echo var="button_text" --></a>
-            <!--# endif -->
         </div>
     </div>
 
