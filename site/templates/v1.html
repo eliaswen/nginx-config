@@ -9,26 +9,24 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-
     <div class="main-content-area">
-        <div class="container">
-            <div class="icon"><!--# echo var="emoji" --></div>
-            <div class="logo"><!--# echo var="title" --></div>
-            <div class="error-message">
+        <div class="page-container">
+            <div class="page-icon"><!--# echo var="emoji" --></div>
+            <!--# if expr="$title = 'ewenlau.net'" -->
+            <div class="site-title"><!--# echo var="title" --></div>
+            <!--# else -->
+            <h1 class="page-title"><!--# echo var="title" --></h1>
+            <!--# endif -->
+            <div class="page-description">
                 <!--# echo var="description" -->
             </div>
             <!--# if expr="$show_button" -->
-            <a href="<!--# echo var="button_link" -->" class="home-button"><!--# echo var="button_text" --></a>
+            <a href="<!--# echo var="button_link" -->" class="navigation-button"><!--# echo var="button_text" --></a>
             <!--# endif -->
         </div>
     </div>
 
-    <div class="social-links">
+    <div class="social-navigation">
         <a id="discord-copy-button" title="Copy Discord Username: ewenlau">
             <i class="fab fa-discord"></i>
         </a>
@@ -43,7 +41,7 @@
         </a>
     </div>
 
-    <div class="footer">
+    <div class="site-footer">
         © <span id="current-year"></span> ewenlau.net
     </div>
 
